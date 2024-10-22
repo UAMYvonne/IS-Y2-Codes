@@ -1,0 +1,331 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+  public class question1 {
+    public static void main(String[] args) {
+    int num;
+        System.out.println("Enter a number");
+         Scanner n =new Scanner(System.in);
+        num=n.nextInt();
+        if ( num% 2 == 0){
+             System.out.println("The number is even");
+        }
+        else {
+            System.out.println("The number is odd");
+    }
+    }
+}  
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question2 {
+public static void main(String[]args){
+Scanner first =new Scanner(System.in);
+  System.out.print("Enter your grade (A, B, C, D, F): ");
+  String grade = first.next().toUpperCase(); 
+
+        switch (grade) {
+            case "A":
+                System.out.println("Excellent work!");
+                break;
+            case "B":
+                System.out.println("Good job!");
+                break;
+            case "C":
+                System.out.println("You passed!");
+                break;
+            case "D":
+                System.out.println("You need to improve.");
+                break;
+            case "F":
+                System.out.println("You failed. Try harder next time.");
+                break;
+            default:
+                System.out.println("Invalid grade entered. Please enter A, B, C, D, or F.");
+                break;
+        }
+        first.close();
+    }
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question3{
+
+    public static void main(String[] args) {
+       int year;
+        System.out.println("Enter  year");
+         Scanner n =new Scanner(System.in);
+        year=n.nextInt();
+if ((year % 4 == 0) && (year % 100 !=0) || (year % 400 == 0)) {
+System.out.println("It is leap year");
+}
+else {
+
+ System.out.println("It is not leap year");       
+        
+    
+}
+}
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question4 {
+     public static void main(String[]args){
+    Scanner obj= new Scanner(System.in);
+    System.out.println("enter number1");
+    int num1=obj.nextInt();
+    System.out.println("enter number2");
+     int num2=obj.nextInt();
+    System.out.println("enter number3");
+     int num3=obj.nextInt();
+     if(num1>num2&&num1>num3){
+         System.out.println(num1+"is largest");
+     }
+    else if(num2>num1&&num2>num3){
+         System.out.println(num2+"is largest");
+     }
+     else
+        System.out.println(num3+"is largest");
+}
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question5 {
+    public static void main(String[]args){
+    Scanner obj=new Scanner(System.in);
+    int num;
+    System.out.println("enter number");
+   num=obj.nextInt();
+   if(num>0){
+       System.out.println(num+"is positive");
+   }
+   else if(num<0){
+       System.out.println(num+"is negative");
+   }
+   else
+       System.out.println(num+"is zero");
+}
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question6{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int num = sc.nextInt();
+
+        for (int i = 1; i <= num; i++) {
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
+            }
+            System.out.println("\n"); 
+        }
+
+        sc.close();
+    }
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question7 {
+    public static void main(String[]args){
+        int i,j,row,space=1;
+        System.out.print("enter the number of row to print: ");
+        Scanner sc =new Scanner(System.in);
+        row= sc.nextInt();
+        space= row-1;
+        for( j=1;j<=row;j++){
+            for(i=1;i<=space;i++){
+                System.out.print("");
+        }
+            space--;
+            for(i=1;i<=2*j-1;i++){
+                System.out.print("*");
+            }
+            System.out.println("");
+    }
+        space=1;
+        for(j=1;j<=row-1;j++){
+            for(i=1;i<=space;i++){
+                System.out.print("");
+            }
+            space++;
+            for(i=1;i<=2*(row-j)-1;i++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question8 {
+    public static void main(String[] args) {
+        int[] Array ={10,12,34,23,56,78};
+        int sum=0;
+       float avrg;
+  for ( int i=0; i<6; i++){
+      sum=sum+Array[i];
+  }
+      avrg=sum/6;
+  
+  
+      System.out.println(avrg);
+  } }
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+import java.util.Scanner;
+public class question9{
+    public static void main(String[] args) {
+    int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8}; 
+    int[] reversed = new int[numbers.length];
+    for (int i = 0; i < numbers.length; i++) {
+    reversed[i] = numbers[numbers.length - 1 - i];
+    }
+        System.out.print("Reversed array: ");
+        for (int number : reversed) {
+            System.out.print(number + " ");
+        }
+    }
+}
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.assignment2;
+
+/**
+ *
+ * @author educa
+ */
+ import java.util.Scanner;
+    public class question10 {
+    public static void main(String[] args) {
+    int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = numbers[0];
+        
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+        }
+        
+        System.out.println("The largest element in the array is: " + largest);
+    }
+}
+
